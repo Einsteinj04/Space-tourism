@@ -1,11 +1,12 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
+import './Navbar.css'
 const Navbar = () => {
   const [toggle, setToggle] = useState(false)
   const togglebtn = () => {
     setToggle(!toggle)
   }
   return (
-    <nav className="max-w-[1480px] w-full mx-auto absolute md:top-10 right-0 h-24 pl-3 flex justify-between items-center gap-2">
+    <nav className="max-w-[1480px] w-full mx-auto fixed md:top-10 right-0 h-24 pl-3 flex justify-between items-center gap-2 z-[3000]">
       <div>
         <img
           src="../../src/assets/shared/logo.svg"
@@ -17,7 +18,7 @@ const Navbar = () => {
       <menu
         className={
           toggle
-            ? "max-w-[830px] md:pl-28 px-10 max-[550px]:py-[30%] w-full max-[550px]:fixed max-[550px]:top-0 max-[550px]:right-0 max-[550px]:bottom-0 z-50 max-[550px]:left-[30%]"
+            ? "max-w-[830px] md:pl-28 px-10 max-[550px]:py-[30%] w-full max-[550px]:fixed max-[550px]:top-0 max-[550px]:right-0 max-[550px]:bottom-0 z-50 max-[550px]:left-[30%] animate__animated animate__fadeInRight"
             : "max-w-[830px] md:pl-28 px-10 max-[550px]:py-[30%] w-full max-[550px]:fixed max-[550px]:top-0 max-[550px]:right-0 max-[550px]:bottom-0 z-50 max-[550px]:left-[30%] max-[550px]:hidden"
         }
       >

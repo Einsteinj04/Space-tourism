@@ -14,10 +14,12 @@ module.exports = {
       md: "var(--fs-md)",
       sm: "var(--fs-sm)",
       xsm: "var(--fs-xsm)",
+      xxsm: "var(--fs-xxsm)",
+      xxxsm: "var(--fs-xxxsm)",
     },
     fontFamily: {
-      'bellefair': 'var(--ff-bellefair)',
-      'barlow': 'var(--ff-barlow)'
+      bellefair: "var(--ff-bellefair)",
+      barlow: "var(--ff-barlow)",
     },
     extend: {},
   },

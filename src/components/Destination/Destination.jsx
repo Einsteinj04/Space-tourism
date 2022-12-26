@@ -1,13 +1,13 @@
+
 import React, { useState } from "react";
 import Data from '../../data.json'
-import './Destination.css'
 const Destination = () => {
   const [item, setItems] = useState(Data.destinations[0])
   const filterItems = (detail) => {
     setItems(Data.destinations.find((item) => item.name === detail));
   }
   return (
-    <section className="min-h-[100vh] px-5 lg:py-52 py-10 lg:bg-[url('../../../src/assets/destination/background-destination-desktop.jpg')] md:bg-[url('../../../src/assets/destination/background-destination-tablet.jpg')] bg-[url('../../../src/assets/destination/background-destination-mobile.jpg')] bg-cover bg-no-repeat">
+    <section className="min-h-[100vh] px-5 lg:pt-40 py-24 lg:bg-[url('../../../src/assets/destination/background-destination-desktop.jpg')] md:bg-[url('../../../src/assets/destination/background-destination-tablet.jpg')] bg-[url('../../../src/assets/destination/background-destination-mobile.jpg')] bg-cover bg-no-repeat">
       <h2
         className="uppercase font-barlow md:text-sm text-xxsm tracking-[.25em] pb-[97px] md:text-left text-center px-20"
         data-aos="fade-in"
@@ -24,17 +24,25 @@ const Destination = () => {
           <img src={`../../../src/${item.images.png}`} alt={item.name} />
         </div>
         <div className="max-w-[450px] place-self-center">
-          <ul className="flex max-w-[285px] justify-between px-3 mb-10 text-slate font-medium lg:mx-0 mx-auto py-4 outline outline-offset-2 outline-1 h-24">
+          <ul className="flex max-w-[285px] justify-between px-3 mb-10 text-slate font-medium lg:mx-0 mx-auto py-4 h-24 gap-2">
             {Data.destinations.map((list) => {
               return (
                 <li
-                  className="pl-[-350px] text-center outline outline-offset-2 outline-1 cursor-pointer"
+                  className="pl-[-350px] text-center cursor-pointer"
                   onClick={() => {
                     filterItems(list.name);
                   }}
                   key={list.name}
                 >
-                  <a className="ml-[-20px] px-4 link:after:w-full">{list.name}</a>
+                  <a className="ml-[-20px] px-4 link:after:w-full" style={{
+                    // this it to give a border style for the active component by using inline react styles
+                    borderBottom:
+                      item.name == list.name ? "4px solid white" : '',
+                    height: '100%',
+                    display: 'flex',
+                    alignItems: 'center'
+                  }}>
+                    {list.name}</a>
                 </li>
               );
             })}

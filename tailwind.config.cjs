@@ -7,6 +7,7 @@ module.exports = {
       blue: "hsl(var(--clr-lightblue))",
       white: "hsl(var(--clr-white))",
       slate: "hsl(var(--clr-white)/ .7)",
+      circle: "hsl(var(--clr-white)/ .2)",
     },
     fontSize: {
       xlg: "var(--fs-xlg)",

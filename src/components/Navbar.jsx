@@ -1,10 +1,16 @@
 import React, { useState } from 'react';
+import { NavLink} from 'react-router-dom';
 import './Navbar.css'
 const Navbar = () => {
+  // const [listClicked, setListClicked] = useState(false)
   const [toggle, setToggle] = useState(false)
   const togglebtn = () => {
     setToggle(!toggle)
   }
+  // const handleClick = (e) => {
+  //   e.currentTarget.borderBottom = 'none'
+  //   setListClicked(true)
+  // }
   return (
     <nav className="max-w-[1480px] w-full mx-auto fixed md:top-10 right-0 h-24 pl-3 flex justify-between items-center gap-2 z-[3000]">
       <div>
@@ -28,24 +34,28 @@ const Navbar = () => {
           }
         >
           <li className="md:ml-[-40px] font-barlow">
-            <a href="#">
+            <NavLink
+              to="/"
+              // style={{ borderBottom: "4px solid white" }} onClick={handleClick}
+              className="navlink"
+            >
               <span className="text-slate">00</span>Home
-            </a>
+            </NavLink>
           </li>
           <li>
-            <a href="#">
+            <NavLink to="/destination" className="navlink">
               <span>01</span>Destination
-            </a>
+            </NavLink>
           </li>
           <li>
-            <a href="#">
+            <NavLink to="/crew" className="navlink">
               <span>02</span>Crew
-            </a>
+            </NavLink>
           </li>
           <li>
-            <a href="#">
+            <NavLink to="/technology" className="navlink">
               <span>03</span>Technology
-            </a>
+            </NavLink>
           </li>
         </ul>
       </menu>

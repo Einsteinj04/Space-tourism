@@ -1,5 +1,6 @@
 import React from "react";
-import './Home.css'
+import './Home.css';
+import { Link } from "react-router-dom";
 const Home = () => {
   return (
     <section className="grid md:grid-cols-2 grid-rows-1 gap-12 min-h-screen bg-cover w-auto lg:bg-[url('../../src/assets/home/background-home-desktop.jpg')] md:bg-[url('../../src/assets/home/background-home-tablet.jpg')] bg-[url('../../src/assets/home/background-home-mobile.jpg')]  md:bg-center bg-no-repeat pt-32 sm:px-20 px-5 bg-center">
@@ -16,7 +17,7 @@ const Home = () => {
           </span>
         </h1>
         <p
-          className="text-slate font-medium md:text-left text-center"
+          className="text-slate font-medium md:text-left text-center md:text-xxsm"
           data-aos="fade-up"
           data-aos-duration="1000"
         >
@@ -28,9 +29,11 @@ const Home = () => {
       </div>
       <div className="text-slate place-self-center max-[800px]:pb-[100px] animate__animated animate__pulse animate__infinite animate__slow">
         <button>
-          <a href="#">Explore</a>
+          <Link to="/destination" className="explore">
+            Explore
+          </Link>
         </button>
-        </div>
+      </div>
     </section>
   );
 }

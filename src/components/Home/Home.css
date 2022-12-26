@@ -17,6 +17,9 @@ button:hover::after,button:hover::after{
   opacity: 1;
   transform: scale(1.5);
 }
+/* .explore{
+  height:100%;
+} */
 @media (max-width: 375px){
   button{
   padding: 0 2em;

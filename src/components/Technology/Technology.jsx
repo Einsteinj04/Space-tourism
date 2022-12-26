@@ -16,7 +16,7 @@ const Technology = () => {
         Launch 101
       </h2>
       <div className="grid md:grid-cols-2 grid-rows-2 gap-5 w-full outline outline-offset-2 outline-1">
-        <div className="outline outline-offset-2 outline-1 md:order-none order-2 flex px-20 gap-20 justify-center items-center md:flex-row flex-col w-full">
+        <div className="outline outline-offset-2 outline-1 md:order-none order-2 flex gap-50 items-center md:flex-row flex-col w-full">
           <div className="flex md:flex-col flex-row outline outline-offset-2 outline-1 w-full justify-evenly h-full items-center">
             {Data.technology.map((list) => {
               return (
